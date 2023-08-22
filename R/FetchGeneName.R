@@ -1,3 +1,11 @@
+#' Nearest gene for given variant
+#'
+#' @param query_rsID rsid
+#'
+#' @return dataframe
+#' @export
+#'
+#' @examples OpenTargetFunc("rs12345")
 OpenTargetFunc <- function(query_rsID) {
    # Build query string
    query_string = "
