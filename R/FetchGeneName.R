@@ -2,7 +2,7 @@
 #'
 #' @param query_rsID rsid
 #'
-#' @return dataframe
+#' @return A data frame
 #' @export
 #'
 #' @examples OpenTargetFunc("rs12345")
