@@ -8,7 +8,8 @@
 #' @examples OpenTargetFunc("rs12345")
 OpenTargetFunc <- function(rsids) {
   rsids |>
-    purrr::map_dfr(OpenTargetFunc_single)
+    purrr::map(OpenTargetFunc_single) |>
+    dplyr::bind_rows()
 }
 
 OpenTargetFunc_single <- function(query_rsID) {
