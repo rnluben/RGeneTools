@@ -2,7 +2,7 @@ library(shiny)
 library(RGeneTools)
 library(stringr)
 
-ui <- fluidPage(textAreaInput("rsids", "RSIDs (one on each new line)"),
+ui <- fluidPage(textAreaInput("rsids", "RSIDs (one on each new line)", value = "rs12345\nrs1061170\nrs859705", height = '200px'),
                 tableOutput("nearest_genes"))
 
 server <- function(input, output, session) {
