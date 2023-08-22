@@ -1,12 +1,17 @@
 #' Nearest gene for given variant
 #'
-#' @param query_rsID rsid
+#' @param rsids Character vector of rsids
 #'
 #' @return A data frame
 #' @export
 #'
 #' @examples OpenTargetFunc("rs12345")
-OpenTargetFunc <- function(query_rsID) {
+OpenTargetFunc <- function(rsids) {
+  rsids |>
+    purrr::map_dfr(OpenTargetFunc_single)
+}
+
+OpenTargetFunc_single <- function(query_rsID) {
    # Build query string
    query_string = "
    query useSearchToConvertRSIDIntoIDFormat($query_rsID: String!) {

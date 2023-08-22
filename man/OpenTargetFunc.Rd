@@ -4,13 +4,13 @@
 \alias{OpenTargetFunc}
 \title{Nearest gene for given variant}
 \usage{
-OpenTargetFunc(query_rsID)
+OpenTargetFunc(rsids)
 }
 \arguments{
-\item{query_rsID}{rsid}
+\item{rsids}{Character vector of rsids}
 }
 \value{
-dataframe
+A data frame
 }
 \description{
 Nearest gene for given variant
