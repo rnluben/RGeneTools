@@ -12,6 +12,7 @@ RoxygenNote: 7.2.3
 Imports:
     dplyr,
     httr,
+    httr2,
     purrr,
     tibble
 URL: https://rnluben.github.io/RGeneTools/
