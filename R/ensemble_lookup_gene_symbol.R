@@ -10,7 +10,7 @@
 #' @return A tibble.
 #' @export
 #' @examples
-#'  lookup_gene_symbols(c("ARMS2", "CFH))
+#'  lookup_gene_symbols(c("ARMS2", "CFH"))
 lookup_gene_symbols <- function(gene_symbols,
                                 build = "GRCh38") {
   gene_symbols |>
