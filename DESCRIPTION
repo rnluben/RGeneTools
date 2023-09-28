@@ -14,5 +14,6 @@ Imports:
     httr,
     httr2,
     purrr,
-    tibble
+    tibble,
+    tidyselect
 URL: https://rnluben.github.io/RGeneTools/

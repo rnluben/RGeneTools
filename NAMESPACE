@@ -3,3 +3,4 @@
 export(OpenTargetFunc)
 export(lookup_gene_symbols)
 export(lookup_variant_vep)
+export(ot_knowndrugs)
