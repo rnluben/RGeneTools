@@ -13,6 +13,7 @@ Imports:
     dplyr,
     httr,
     httr2,
+    janitor,
     purrr,
     tibble,
     tidyr,

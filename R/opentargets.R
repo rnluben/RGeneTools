@@ -21,6 +21,80 @@ ot_knowndrugs <- function(ensgIds,
     dplyr::bind_rows(.id = "ensgId")
 }
 
+#' Get tractability data for EnsemblIDs
+#'
+#' Returns a tibble of available [tractability
+#' data](https://platform-docs.opentargets.org/target/tractability) for one or
+#' more EnsemblIDs. 
+#' 
+#' Each queried EnsemblID will return 4 rows of data, one for
+#' each [assessment
+#' modality](https://platform-docs.opentargets.org/target/tractability#assessments):
+#'
+#' - 'SM' = Small molecule
+#' - 'AB' = Antibody
+#' - 'PR' = PROTAC
+#' - 'OC' = Other modalities (*see [example](https://platform.opentargets.org/target/ENSG00000169083) on OpenTargets web browser*)
+#'
+#' @inheritParams ot_knowndrugs
+#'
+#' @return A tibble
+#' @export
+#' @examples
+#' # get tractability data for 2 targets
+#' result <- ot_target_tractability(c("ENSG00000157764", "ENSG00000122482"))
+#' 
+#' # see if these are 'druggable', as per the pipeline by Finan et al
+#' result |>
+#'   dplyr::filter(modality == "SM") |>
+#'   dplyr::select(ensgId, druggable_family)
+ot_target_tractability <- function(ensgIds) {
+  ensgIds |>
+    purrr::set_names() |>
+    purrr::map(\(x) ot_target_tractability_single(ensgId = x)) |>
+    dplyr::bind_rows() |>
+    dplyr::rename("ensgId" = "id")
+}
+
+# PRIVATE -----------------------------------------------------------------
+
+ot_target_tractability_single <- function(ensgId) {
+  result <- submit_ot_query(
+    variables = list("ensgId" = ensgId),
+    query = "
+      query tractability(
+        $ensgId: String!
+      ) {
+        target(ensemblId: $ensgId){
+          id
+          approvedSymbol
+          biotype
+          tractability {
+            label
+            modality
+            value
+          }
+        }
+      }
+      "
+  )
+  
+  result <- result$data$target
+  
+  result$tractability <- result$tractability |>
+    dplyr::bind_rows() |>
+    tidyr::pivot_wider(names_from = "label", 
+                       values_from = "value")
+  
+  id <- result |>
+    purrr::discard(is.data.frame) |>
+    tibble::as_tibble()
+  
+  id |>
+    dplyr::bind_cols(result$tractability) |>
+    janitor::clean_names()
+}
+
 ot_knowndrugs_single <- function(ensgId,
                           size = 1000) {
   result <- submit_ot_query(
