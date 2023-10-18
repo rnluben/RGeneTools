@@ -22,5 +22,5 @@ Queries Ensembl REST API (build \href{https://rest.ensembl.org/}{38} or
 across transcripts.
 }
 \examples{
-lookup_variant_vep()
+lookup_variant_vep(variants = "9:22125503-22125502:1/C")
 }

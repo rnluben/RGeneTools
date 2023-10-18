@@ -34,7 +34,7 @@ lookup_gene_symbols <- function(gene_symbols,
 #' @export
 #'
 #' @examples
-#' lookup_variant_vep()
+#' lookup_variant_vep(variants = "9:22125503-22125502:1/C")
 lookup_variant_vep <- function(variants,
                                build = "GRCh38") {
   variants |>
