@@ -62,8 +62,7 @@ more EnsemblIDs.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Each queried EnsemblID will return 4 rows of data, one for
-each <a href="https://platform-docs.opentargets.org/target/tractability#assessments" class="external-link">assessment modality</a>:</p><ul><li><p>'SM' = Small molecule</p></li>
+    <p>Each queried EnsemblID will return 4 rows of data, one for each <a href="https://platform-docs.opentargets.org/target/tractability#assessments" class="external-link">assessment modality</a>:</p><ul><li><p>'SM' = Small molecule</p></li>
 <li><p>'AB' = Antibody</p></li>
 <li><p>'PR' = PROTAC</p></li>
 <li><p>'OC' = Other modalities (<em>see <a href="https://platform.opentargets.org/target/ENSG00000169083" class="external-link">example</a> on OpenTargets web browser</em>)</p></li>
@@ -71,8 +70,8 @@ each <a href="https://platform-docs.opentargets.org/target/tractability#assessme
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># get tractability data for 2 targets</span></span></span>
-<span class="r-in"><span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu">ot_target_tractability</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"ENSG00000157764"</span>, <span class="st">"ENSG00000122482"</span><span class="op">)</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># get tractability data for 2 targets (note ENSG00000162711 does not have tractability data)</span></span></span>
+<span class="r-in"><span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu">ot_target_tractability</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"ENSG00000157764"</span>, <span class="st">"ENSG00000122482"</span>, <span class="st">"ENSG00000162711"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># see if these are 'druggable', as per the pipeline by Finan et al</span></span></span>
 <span class="r-in"><span><span class="va">result</span> <span class="op">|&gt;</span></span></span>
