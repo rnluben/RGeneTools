@@ -17,8 +17,7 @@ Returns a tibble of available \href{https://platform-docs.opentargets.org/target
 more EnsemblIDs.
 }
 \details{
-Each queried EnsemblID will return 4 rows of data, one for
-each \href{https://platform-docs.opentargets.org/target/tractability#assessments}{assessment modality}:
+Each queried EnsemblID will return 4 rows of data, one for each \href{https://platform-docs.opentargets.org/target/tractability#assessments}{assessment modality}:
 \itemize{
 \item 'SM' = Small molecule
 \item 'AB' = Antibody
@@ -27,8 +26,8 @@ each \href{https://platform-docs.opentargets.org/target/tractability#assessments
 }
 }
 \examples{
-# get tractability data for 2 targets
-result <- ot_target_tractability(c("ENSG00000157764", "ENSG00000122482"))
+# get tractability data for 2 targets (note ENSG00000162711 does not have tractability data)
+result <- ot_target_tractability(c("ENSG00000157764", "ENSG00000122482", "ENSG00000162711"))
 
 # see if these are 'druggable', as per the pipeline by Finan et al
 result |>

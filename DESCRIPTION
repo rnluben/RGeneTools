@@ -15,6 +15,7 @@ Imports:
     httr2,
     janitor,
     purrr,
+    rlang,
     tibble,
     tidyr,
     tidyselect

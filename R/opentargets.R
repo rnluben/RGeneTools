@@ -25,10 +25,9 @@ ot_knowndrugs <- function(ensgIds,
 #'
 #' Returns a tibble of available [tractability
 #' data](https://platform-docs.opentargets.org/target/tractability) for one or
-#' more EnsemblIDs. 
-#' 
-#' Each queried EnsemblID will return 4 rows of data, one for
-#' each [assessment
+#' more EnsemblIDs.
+#'
+#' Each queried EnsemblID will return 4 rows of data, one for each [assessment
 #' modality](https://platform-docs.opentargets.org/target/tractability#assessments):
 #'
 #' - 'SM' = Small molecule
@@ -41,9 +40,9 @@ ot_knowndrugs <- function(ensgIds,
 #' @return A tibble
 #' @export
 #' @examples
-#' # get tractability data for 2 targets
-#' result <- ot_target_tractability(c("ENSG00000157764", "ENSG00000122482"))
-#' 
+#' # get tractability data for 2 targets (note ENSG00000162711 does not have tractability data)
+#' result <- ot_target_tractability(c("ENSG00000157764", "ENSG00000122482", "ENSG00000162711"))
+#'
 #' # see if these are 'druggable', as per the pipeline by Finan et al
 #' result |>
 #'   dplyr::filter(modality == "SM") |>
@@ -79,20 +78,23 @@ ot_target_tractability_single <- function(ensgId) {
       "
   )
   
-  result <- result$data$target
+  x <- result$data$target
   
-  result$tractability <- result$tractability |>
-    dplyr::bind_rows() |>
-    tidyr::pivot_wider(names_from = "label", 
-                       values_from = "value")
-  
-  id <- result |>
-    purrr::discard(is.data.frame) |>
+  result <- x[1:3] |>
     tibble::as_tibble()
   
-  id |>
-    dplyr::bind_cols(result$tractability) |>
-    janitor::clean_names()
+  if (!rlang::is_empty(x$tractability)) {
+    tractability <- x$tractability |>
+      dplyr::bind_rows() |>
+      tidyr::pivot_wider(names_from = "label", 
+                         values_from = "value") |>
+      janitor::clean_names()
+    
+    result <- result |>
+      dplyr::bind_cols(tractability)
+  }
+  
+  result
 }
 
 ot_knowndrugs_single <- function(ensgId,
