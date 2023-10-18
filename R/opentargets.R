@@ -11,9 +11,13 @@
 #' 
 ot_knowndrugs <- function(ensgIds,
                           size = 1000) {
+  
+  ot_knowndrugs_single_possibly <- purrr::possibly(ot_knowndrugs_single,
+                                                   otherwise = tibble::tibble(ensgId = NA))
+  
   ensgIds |>
     purrr::set_names() |>
-    purrr::map(\(x) ot_knowndrugs_single(ensgId = x, size = size)) |>
+    purrr::map(\(x) ot_knowndrugs_single_possibly(ensgId = x, size = size)) |>
     dplyr::bind_rows(.id = "ensgId")
 }
 
