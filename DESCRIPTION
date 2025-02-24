@@ -20,3 +20,10 @@ Imports:
     tidyr,
     tidyselect
 URL: https://rnluben.github.io/RGeneTools/
+Suggests: 
+    crosstalk,
+    flextable,
+    openxlsx,
+    otargen,
+    shiny,
+    stringr
