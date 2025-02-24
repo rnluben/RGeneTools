@@ -1,33 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://rnluben.github.io/RGeneTools/404.html</loc>
-  </url>
-  <url>
-    <loc>https://rnluben.github.io/RGeneTools/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://rnluben.github.io/RGeneTools/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://rnluben.github.io/RGeneTools/index.html</loc>
-  </url>
-  <url>
-    <loc>https://rnluben.github.io/RGeneTools/reference/OpenTargetFunc.html</loc>
-  </url>
-  <url>
-    <loc>https://rnluben.github.io/RGeneTools/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://rnluben.github.io/RGeneTools/reference/lookup_gene_symbols.html</loc>
-  </url>
-  <url>
-    <loc>https://rnluben.github.io/RGeneTools/reference/lookup_variant_vep.html</loc>
-  </url>
-  <url>
-    <loc>https://rnluben.github.io/RGeneTools/reference/ot_knowndrugs.html</loc>
-  </url>
-  <url>
-    <loc>https://rnluben.github.io/RGeneTools/reference/ot_target_tractability.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://rnluben.github.io/RGeneTools/404.html</loc></url>
+<url><loc>https://rnluben.github.io/RGeneTools/LICENSE.html</loc></url>
+<url><loc>https://rnluben.github.io/RGeneTools/authors.html</loc></url>
+<url><loc>https://rnluben.github.io/RGeneTools/index.html</loc></url>
+<url><loc>https://rnluben.github.io/RGeneTools/reference/OpenTargetFunc.html</loc></url>
+<url><loc>https://rnluben.github.io/RGeneTools/reference/index.html</loc></url>
+<url><loc>https://rnluben.github.io/RGeneTools/reference/lookup_gene_symbols.html</loc></url>
+<url><loc>https://rnluben.github.io/RGeneTools/reference/lookup_variant_vep.html</loc></url>
+<url><loc>https://rnluben.github.io/RGeneTools/reference/ot_knowndrugs.html</loc></url>
+<url><loc>https://rnluben.github.io/RGeneTools/reference/ot_target_tractability.html</loc></url>
 </urlset>
+
