@@ -61,20 +61,20 @@
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">ot_knowndrugs</span><span class="op">(</span><span class="st">"ENSG00000157764"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 839 × 12</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 821 × 12</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    ensgId        phase status urls.name urls.url disease.id disease.name drug.id</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> ENSG00000157…     4 Unkno… Clinical… https:/… MONDO_000… thrombotic … CHEMBL…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> ENSG00000157…     4 Unkno… DailyMed… https:/… EFO_00007… melanoma     CHEMBL…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> ENSG00000157…     4 Unkno… DailyMed  https:/… EFO_00026… metastatic … CHEMBL…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> ENSG00000157…     4 Compl… Clinical… https:/… EFO_10014… metastatic … CHEMBL…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> ENSG00000157…     4 Recru… Clinical… https:/… EFO_00001… hepatocellu… CHEMBL…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> ENSG00000157…     4 Termi… Clinical… https:/… EFO_00026… metastatic … CHEMBL…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> ENSG00000157…     4 Unkno… EMA       https:/… EFO_00041… colorectal … CHEMBL…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> ENSG00000157…     4 Compl… Clinical… https:/… EFO_00001… hepatocellu… CHEMBL…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> ENSG00000157…     4 Unkno… Clinical… https:/… EFO_00001… hepatocellu… CHEMBL…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> ENSG00000157…     4 Unkno… DailyMed  https:/… MONDO_000… colorectal … CHEMBL…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 829 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> ENSG00000157…     4 Termi… Clinical… https:/… EFO_00026… metastatic … CHEMBL…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> ENSG00000157…     4 Unkno… EMA       https:/… EFO_00041… colorectal … CHEMBL…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> ENSG00000157…     4 Compl… Clinical… https:/… EFO_00006… neoplasm     CHEMBL…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> ENSG00000157…     4 Unkno… FDA       https:/… EFO_00026… metastatic … CHEMBL…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> ENSG00000157…     4 Recru… Clinical… https:/… EFO_00006… neoplasm     CHEMBL…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> ENSG00000157…     4 Unkno… DailyMed  https:/… EFO_00028… thyroid car… CHEMBL…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> ENSG00000157…     4 Unkno… ATC       https:/… EFO_00006… neoplasm     CHEMBL…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> ENSG00000157…     4 Unkno… EMA|Dail… https:/… EFO_00007… melanoma     CHEMBL…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> ENSG00000157…     4 Unkno… DailyMed… https:/… EFO_00007… melanoma     CHEMBL…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> ENSG00000157…     4 Unkno… ATC       https:/… EFO_00006… neoplasm     CHEMBL…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 811 more rows</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 4 more variables: drug.name &lt;chr&gt;, drug.mechanismsOfAction &lt;chr&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   drugType &lt;chr&gt;, mechanismOfAction &lt;chr&gt;</span></span>
 <span class="r-in"><span></span></span>
@@ -89,7 +89,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
 </div>
 
     </footer></div>
