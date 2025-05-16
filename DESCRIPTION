@@ -19,7 +19,9 @@ Imports:
     tibble,
     tidyr,
     tidyselect
-URL: https://rnluben.github.io/RGeneTools/
+URL: https://rnluben.github.io/RGeneTools/,
+    https://github.com/rnluben/RGeneTools
+BugReports: https://github.com/rnluben/RGeneTools/issues
 Suggests: 
     crosstalk,
     flextable,
