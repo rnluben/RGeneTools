@@ -36,8 +36,8 @@ OpenTargetFunc_single <- function(query_rsID) {
    "
    
    # Set base URL of GraphQL API endpoint
-   base_url <- "https://api.genetics.opentargets.org/graphql"
-   
+   base_url <- "https://api.platform.opentargets.org/api/v4/graphql"
+
    # Set variables object of arguments to be passed to endpoint
    variables <- list("query_rsID" = query_rsID)
    
